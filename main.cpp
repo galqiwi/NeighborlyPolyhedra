@@ -326,6 +326,9 @@ int main(int argc, char* argv[]) {
     std::cin >> g_topology;
     std::cout << std::endl;
 
+    std::cout << "Seed: " << seed << std::endl;
+    std::cout << "Topology: " << g_topology << std::endl;
+
     set_rand_seed(seed);
 
     //Run the optimizer (choose one)
