@@ -194,7 +194,7 @@ void main_solver() {
         const bool can_save = (crossings == 0 || (crossings + intersections <= 10));
 #endif
         const std::string save_str = topology_folder + "/shape";
-        // save_sample(save_str.c_str(), planes, v3ds, iter, can_save);
+        save_sample(save_str.c_str(), planes, v3ds, iter, false /*can_save*/);
         iter += 1;
         break;
     }
