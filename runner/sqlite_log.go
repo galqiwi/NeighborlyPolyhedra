@@ -10,7 +10,7 @@ type SqliteLog struct {
 }
 
 func NewSqliteLog(path string) (*SqliteLog, error) {
-	db, err := sql.Open("sqlite3", path)
+	db, err := sql.Open("sqlite3", path+"?_busy_timeout=300000")
 	if err != nil {
 		return nil, err
 	}
