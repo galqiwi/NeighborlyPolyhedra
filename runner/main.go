@@ -24,7 +24,7 @@ func Main() error {
 
 			fmt.Printf("running seed=%d, topology=%d on cpu=%d\n", seed, topology, cpu)
 
-			err = runAndSaveStdout(args.logsPath, args.execPath, cpu, seed, topology)
+			err := runAndSaveStdout(args.logsPath, args.execPath, cpu, seed, topology)
 			if err != nil {
 				fmt.Println(err)
 			}
