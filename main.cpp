@@ -146,7 +146,7 @@ void main_solver() {
     int iter = 0;
     while (true) {
         //Load the dual adjacency list
-        g_topology = iter % NUM_TOPOLOGIES;
+        // g_topology = iter % NUM_TOPOLOGIES;
         open_topology("topologies.txt", g_tris, g_topology);
         std::cout << "Topology[" << g_topology << "]" << std::endl;
 
@@ -196,6 +196,7 @@ void main_solver() {
         const std::string save_str = topology_folder + "/shape";
         save_sample(save_str.c_str(), planes, v3ds, iter, can_save);
         iter += 1;
+        break;
     }
 }
 
@@ -320,6 +321,11 @@ int main(int argc, char* argv[]) {
     std::cout << "Seed: ";
     std::cin >> seed;
     std::cout << std::endl;
+    
+    std::cout << "Topology: ";
+    std::cin >> g_topology;
+    std::cout << std::endl;
+    
     set_rand_seed(seed);
 
     //Run the optimizer (choose one)
